@@ -93,105 +93,112 @@ class _MyHomePageState extends State<MyHomePage> {
           color: const Color(0xFF24416B),
           child: Column(
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    width: screenWidth * 40 / 100,
-                    height: 300,
-                    padding: const EdgeInsets.all(32),
-                    decoration: BoxDecoration(
-                      color: const Color(0xFF24416B),
-                      border: Border.all(
-                          color: const Color(0xFF3F577A), width: 2.0),
-                      borderRadius: BorderRadius.circular(32.0),
-                    ),
-                    child: Column(
-                      children: [
-                        Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
+              IntrinsicHeight(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    SizedBox(width: screenWidth * 5 / 100),
+                    Expanded(
+                      child: Container(
+                        padding: const EdgeInsets.all(32),
+                        decoration: BoxDecoration(
+                          color: const Color(0xFF24416B),
+                          border: Border.all(
+                              color: const Color(0xFF3F577A), width: 2.0),
+                          borderRadius: BorderRadius.circular(32.0),
+                        ),
+                        child: Column(
                           children: [
-                            Image.asset(AppAssets.thunder),
-                            const SizedBox(width: 10),
-                            const Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    "Building mobile apps has never been easier!",
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 24,
-                                      fontFamily: 'Inter',
-                                      fontWeight: FontWeight.w600,
-                                    ),
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Image.asset(AppAssets.thunder),
+                                const SizedBox(width: 10),
+                                const Expanded(
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        "Building mobile apps has never been easier!",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 24,
+                                          fontFamily: 'Inter',
+                                          fontWeight: FontWeight.w600,
+                                        ),
+                                      ),
+                                      Text(
+                                        "Whether you are taking your first steps or you've started your journey already, we are here to help. Our people know how to take complex business processes, simplifying them to create a safe and secure digit",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 18,
+                                          fontFamily: 'Inter',
+                                          fontWeight: FontWeight.w400,
+                                        ),
+                                      ),
+                                    ],
                                   ),
-                                  Text(
-                                    "Whether you are taking your first steps or you've started your journey already, we are here to help. Our people know how to take complex business processes, simplifying them to create a safe and secure digit",
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 18,
-                                      fontFamily: 'Inter',
-                                      fontWeight: FontWeight.w400,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            )
+                                )
+                              ],
+                            ),
                           ],
                         ),
-                      ],
+                      ),
                     ),
-                  ),
-                  const SizedBox(width: 32),
-                  Container(
-                    width: screenWidth * 40 / 100,
-                    height: 300,
-                    padding: const EdgeInsets.all(32),
-                    decoration: BoxDecoration(
-                      color: const Color(0xFF24416B),
-                      border: Border.all(
-                          color: const Color(0xFF3F577A), width: 2.0),
-                      borderRadius: BorderRadius.circular(32.0),
-                    ),
-                    child: Column(
-                      children: [
-                        Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
+                    const SizedBox(width: 32),
+                    Expanded(
+                      child: Container(
+                        padding: const EdgeInsets.all(32),
+                        decoration: BoxDecoration(
+                          color: const Color(0xFF24416B),
+                          border: Border.all(
+                              color: const Color(0xFF3F577A), width: 2.0),
+                          borderRadius: BorderRadius.circular(32.0),
+                        ),
+                        child: Column(
                           children: [
-                            Image.asset(AppAssets.rocket),
-                            const SizedBox(width: 10),
-                            const Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    "Mobile apps are acting as a digital face to your organization",
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 24,
-                                      fontFamily: 'Inter',
-                                      fontWeight: FontWeight.w600,
-                                    ),
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Image.asset(AppAssets.rocket),
+                                const SizedBox(width: 10),
+                                const Expanded(
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        "Mobile apps are acting as a digital face to your organization",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 24,
+                                          fontFamily: 'Inter',
+                                          fontWeight: FontWeight.w600,
+                                        ),
+                                      ),
+                                      Text(
+                                        "As customers are relying more on their smartphones, adding mobile apps to your business strategy is just plain smart. Leveraging enhanced end-user experience, lightweight apps, quick time to market, it won't be long before competitors start their own digital journeys. Let Mozaic help you navigate through your digital transformation because that's our expertise.",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 18,
+                                          fontFamily: 'Inter',
+                                          fontWeight: FontWeight.w400,
+                                        ),
+                                      ),
+                                    ],
                                   ),
-                                  Text(
-                                    "As customers are relying more on their smartphones, adding mobile apps to your business strategy is just plain smart. Leveraging enhanced end-user experience, lightweight apps, quick time to market, it won't be long before competitors start their own digital journeys. Let Mozaic help you navigate through your digital transformation because that's our expertise.",
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 18,
-                                      fontFamily: 'Inter',
-                                      fontWeight: FontWeight.w400,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            )
+                                )
+                              ],
+                            ),
                           ],
                         ),
-                      ],
+                      ),
                     ),
-                  ),
-                ],
+                    SizedBox(width: screenWidth * 5 / 100)
+                  ],
+                ),
               ),
               Column(
                 children: [
