@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:my_flutter_web/constant/assets.dart';
 import 'package:my_flutter_web/widgets/_navbar_logo.dart';
 import 'package:my_flutter_web/widgets/_navbar_actions_button.dart';
@@ -84,15 +85,96 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-       appBar: const PreferredSize(
+      appBar: const PreferredSize(
         preferredSize: Size.fromHeight(120),
         child: _NavbarDesktop(),
-        ),
+      ),
       body: SingleChildScrollView(
         child: Container(
           color: const Color(0xFF0D1E3D),
           child: Column(
             children: [
+              Container(
+                padding: const EdgeInsets.only(top: 80),
+                width: screenWidth,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(AppAssets.background),
+                    fit: BoxFit.fill,
+                  ),
+                ),
+                child: Column(children: [
+                  Container(
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 24, vertical: 8),
+                    decoration: ShapeDecoration(
+                      color: const Color(0xFF24416B),
+                      shape: RoundedRectangleBorder(
+                        side: BorderSide(
+                          width: 0.50,
+                          color: Colors.white.withOpacity(0.4000000059604645),
+                        ),
+                        borderRadius: BorderRadius.circular(120),
+                      ),
+                    ),
+                    child: const Text(
+                      'Application Services',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontFamily: 'Inter',
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    width: screenWidth * 0.65,
+                    child: const Text.rich(
+                      TextSpan(children: [
+                        TextSpan(
+                          text: 'Mobile development for ',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 60,
+                            fontFamily: 'Inter',
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        TextSpan(
+                          text: 'Digital Transformation ',
+                          style: TextStyle(
+                            color: Color(0xFFFBD1A2),
+                            fontSize: 60,
+                            fontFamily: 'Inter',
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ]),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 32,
+                  ),
+                  SizedBox(
+                    width: screenWidth * 0.75,
+                    child: const Text(
+                      "Whether you are taking your first steps or you've started your journey already, we are here to help. Our people know how to take complex business processes, simplifying them to create a safe and secure digital experience end-users will quickly understand and appreciate.",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontFamily: 'Inter',
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 32,
+                  ),
+                  Image.asset(AppAssets.mobileService)
+                ]),
+              ),
               IntrinsicHeight(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,

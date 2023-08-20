@@ -13,26 +13,59 @@ class _NavbarDesktopState extends State<_NavbarDesktop> {
     Size size = MediaQuery.of(context).size;
     // theme
     var theme = Theme.of(context);
-      return Container(
-        padding: EdgeInsets.symmetric(horizontal: size.width / 12, vertical: 10),
-        color: const Color(0xFF0D1E3D),
-        child: Row(
-          children: [
-            const NavBarLogo(),
-            Expanded(child: Row(
-              children: [
-                ...NavBarUtils.names.asMap().entries.map(
-                  (e) => NavBarActionButton(
-                    label: e.value,
-                    index: e.key,
-                  ),
-                ),
-              ],
-            )),
-          const NavBarLogo(),
-          ],
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: size.width / 12, vertical: 10),
+      // color: Colors.transparent,
+      decoration: const BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage(AppAssets.headerBg),
+          fit: BoxFit.fill,
         ),
-      );
+        color: Color(0xFF0D1E3D),
+      ),
+      child: Row(
+        children: [
+          const NavBarLogo(),
+          Expanded(
+              child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ...NavBarUtils.names.asMap().entries.map(
+                    (e) => NavBarActionButton(
+                      label: e.value,
+                      index: e.key,
+                    ),
+                  ),
+            ],
+          )),
+          InkWell(
+            onTap: () => {},
+            child: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 8),
+              decoration: ShapeDecoration(
+                color: const Color(0xFF24416B),
+                shape: RoundedRectangleBorder(
+                  side: BorderSide(
+                    width: 0.50,
+                    color: Colors.white.withOpacity(0.4000000059604645),
+                  ),
+                  borderRadius: BorderRadius.circular(120),
+                ),
+              ),
+              child: const Text(
+                'Work with us',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                  fontFamily: 'Inter',
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
 
