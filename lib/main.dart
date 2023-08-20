@@ -87,7 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       body: SingleChildScrollView(
         child: Container(
-          color: const Color(0xFF24416B),
+          color: const Color(0xFF0D1E3D),
           child: Column(
             children: [
               IntrinsicHeight(
@@ -100,11 +100,17 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Container(
                         padding: const EdgeInsets.all(32),
                         decoration: BoxDecoration(
-                          color: const Color(0xFF24416B),
-                          border: Border.all(
-                              color: const Color(0xFF3F577A), width: 2.0),
-                          borderRadius: BorderRadius.circular(32.0),
-                        ),
+                            border: Border.all(
+                                color: const Color(0xFF3F577A), width: 1.0),
+                            borderRadius: BorderRadius.circular(32.0),
+                            gradient: LinearGradient(
+                              begin: Alignment.topCenter,
+                              end: Alignment.bottomCenter,
+                              colors: [
+                                Colors.white.withOpacity(0.06),
+                                Colors.white.withOpacity(0)
+                              ],
+                            )),
                         child: Column(
                           children: [
                             Row(
@@ -149,11 +155,17 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Container(
                         padding: const EdgeInsets.all(32),
                         decoration: BoxDecoration(
-                          color: const Color(0xFF24416B),
-                          border: Border.all(
-                              color: const Color(0xFF3F577A), width: 2.0),
-                          borderRadius: BorderRadius.circular(32.0),
-                        ),
+                            border: Border.all(
+                                color: const Color(0xFF3F577A), width: 1.0),
+                            borderRadius: BorderRadius.circular(32.0),
+                            gradient: LinearGradient(
+                              begin: Alignment.topCenter,
+                              end: Alignment.bottomCenter,
+                              colors: [
+                                Colors.white.withOpacity(0.06),
+                                Colors.white.withOpacity(0)
+                              ],
+                            )),
                         child: Column(
                           children: [
                             Row(
@@ -229,11 +241,17 @@ class _MyHomePageState extends State<MyHomePage> {
                           width: screenWidth * 20 / 100,
                           padding: const EdgeInsets.all(24),
                           decoration: BoxDecoration(
-                            color: const Color(0xFF24416B),
-                            border: Border.all(
-                                color: const Color(0xFF3F577A), width: 2.0),
-                            borderRadius: BorderRadius.circular(32.0),
-                          ),
+                              border: Border.all(
+                                  color: const Color(0xFF3F577A), width: 1.0),
+                              borderRadius: BorderRadius.circular(32.0),
+                              gradient: LinearGradient(
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter,
+                                colors: [
+                                  Colors.white.withOpacity(0.06),
+                                  Colors.white.withOpacity(0)
+                                ],
+                              )),
                           child: Column(
                             children: [
                               Image.asset(AppAssets.iosBanner),
@@ -266,10 +284,17 @@ class _MyHomePageState extends State<MyHomePage> {
                           width: screenWidth * 20 / 100,
                           padding: const EdgeInsets.all(24),
                           decoration: BoxDecoration(
-                            color: const Color(0xFF24416B),
                             border: Border.all(
-                                color: const Color(0xFF3F577A), width: 2.0),
+                                color: const Color(0xFF3F577A), width: 1.0),
                             borderRadius: BorderRadius.circular(32.0),
+                            gradient: LinearGradient(
+                              begin: Alignment.topCenter,
+                              end: Alignment.bottomCenter,
+                              colors: [
+                                Colors.white.withOpacity(0.06),
+                                Colors.white.withOpacity(0)
+                              ],
+                            ),
                           ),
                           child: Column(
                             children: [
