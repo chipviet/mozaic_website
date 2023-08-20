@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:my_flutter_web/constant/assets.dart';
-import 'package:my_flutter_web/widgets/navbar_logo.dart';
+import 'package:my_flutter_web/widgets/_navbar_logo.dart';
+import 'package:my_flutter_web/widgets/_navbar_actions_button.dart';
+import 'package:my_flutter_web/utils/navbar_utils.dart';
+import 'package:my_flutter_web/config/space.dart';
 part 'widgets/_navbar_desktop.dart';
 
 void main() {

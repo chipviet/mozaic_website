@@ -14,30 +14,22 @@ class _NavbarDesktopState extends State<_NavbarDesktop> {
     // theme
     var theme = Theme.of(context);
       return Container(
-        padding: EdgeInsets.symmetric(horizontal: size.width / 8, vertical: 10),
+        padding: EdgeInsets.symmetric(horizontal: size.width / 12, vertical: 10),
         color: const Color(0xFF0D1E3D),
         child: Row(
           children: [
             const NavBarLogo(),
-            // Space.xm!,
-            // ...NavBarUtils.names.asMap().entries.map(
-            //       (e) => NavBarActionButton(
-            //         label: e.value,
-            //         index: e.key,
-            //       ),
-            //     ),
-            // Space.x!,
-            // InkWell(
-            //     onTap: () {
-            //       context.read<ThemeCubit>().updateTheme(!state.isDarkThemeOn);
-            //     },
-            //     child: Image.network(
-            //       state.isDarkThemeOn ? IconUrls.darkIcon : IconUrls.lightIcon,
-            //       height: 30,
-            //       width: 30,
-            //       color: state.isDarkThemeOn ? Colors.black : Colors.white,
-            //     )),
-            // Space.x!,
+            Expanded(child: Row(
+              children: [
+                ...NavBarUtils.names.asMap().entries.map(
+                  (e) => NavBarActionButton(
+                    label: e.value,
+                    index: e.key,
+                  ),
+                ),
+              ],
+            )),
+          const NavBarLogo(),
           ],
         ),
       );
